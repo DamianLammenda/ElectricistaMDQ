@@ -4,6 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Initialize Lucide Icons ---
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+
   // --- Scroll Reveal Animation ---
   const reveals = document.querySelectorAll('.reveal');
   
@@ -22,47 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll(); // Initial check
 
-  // --- Before/After Slider ---
-  const baContainer = document.querySelector('.ba-container');
-  if (baContainer) {
-    const afterImg = baContainer.querySelector('.ba-after');
-    const handle = baContainer.querySelector('.ba-handle');
-    
-    const moveSlider = (e) => {
-      let x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-      const rect = baContainer.getBoundingClientRect();
-      let position = ((x - rect.left) / rect.width) * 100;
-      
-      if (position < 0) position = 0;
-      if (position > 100) position = 100;
-      
-      afterImg.style.width = `${position}%`;
-      handle.style.left = `${position}%`;
-    };
-
-    baContainer.addEventListener('mousemove', moveSlider);
-    baContainer.addEventListener('touchmove', moveSlider);
-  }
-
-  // --- Lightbox ---
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox?.querySelector('img');
-  const galleryItems = document.querySelectorAll('.masonry-item img');
-
-  galleryItems.forEach(img => {
-    img.addEventListener('click', () => {
-      if (lightbox && lightboxImg) {
-        lightboxImg.src = img.src;
-        lightbox.style.display = 'flex';
-      }
-    });
-  });
-
-  if (lightbox) {
-    lightbox.addEventListener('click', () => {
-      lightbox.style.display = 'none';
-    });
-  }
 
   // --- Quick Calculator ---
   const calcButtons = document.querySelectorAll('.calc-btn');
@@ -103,36 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- Counters ---
-  const counters = document.querySelectorAll('.counter');
-  const speed = 200;
-
-  const runCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const inc = target / speed;
-
-      if (count < target) {
-        counter.innerText = Math.ceil(count + inc);
-        setTimeout(runCounters, 1);
-      } else {
-        counter.innerText = target;
-      }
-    });
-  };
-
-  // Intersection Observer for counters
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      runCounters();
-      observer.disconnect();
-    }
-  }, { threshold: 0.5 });
-
-  const counterSection = document.querySelector('.counter-section');
-  if (counterSection) observer.observe(counterSection);
-
   // --- WhatsApp Float Badge ---
   const waBadge = document.querySelector('.wa-badge');
   setTimeout(() => {
@@ -141,11 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Back to Top ---
   const backToTop = document.getElementById('back-to-top');
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-      backToTop.style.opacity = '1';
-    } else {
-      backToTop.style.opacity = '0';
-    }
-  });
+  if (backToTop) {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });

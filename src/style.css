@@ -202,118 +202,9 @@ img {
 
 /* Custom Components */
 .hero-gradient {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/images/hero_electrician_1783107235022.jpg');
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
   background-size: cover;
   background-position: center;
-}
-
-.masonry {
-  column-count: 1;
-  column-gap: 1rem;
-}
-
-@media (min-width: 640px) {
-  .masonry { column-count: 2; }
-}
-
-@media (min-width: 1024px) {
-  .masonry { column-count: 3; }
-}
-
-.masonry-item {
-  display: inline-block;
-  width: 100%;
-  margin-bottom: 1rem;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.masonry-item img {
-  width: 100%;
-  display: block;
-}
-
-.masonry-item:hover {
-  transform: scale(1.02);
-}
-
-.ba-container {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-md);
-}
-
-.ba-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.ba-after {
-  width: 50%;
-  border-right: 3px solid white;
-  z-index: 2;
-}
-
-.ba-handle {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  bottom: 0;
-  width: 4px;
-  background: white;
-  z-index: 3;
-  transform: translateX(-50%);
-  cursor: ew-resize;
-}
-
-.ba-handle::after {
-  content: '↔';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  cursor: zoom-out;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 4px;
 }
 
 .wa-float {
@@ -387,6 +278,37 @@ img {
 
 .faq-icon { transition: transform 0.3s ease; }
 .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+#back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.2s ease;
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#back-to-top:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+#back-to-top:active {
+  transform: translateY(0);
+}
 
 /* Buttons & Hovers */
 button { cursor: pointer; }

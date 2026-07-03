@@ -24,6 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="src/style.css">
     
@@ -52,12 +55,11 @@
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="flex items-center gap-2 font-bold text-xl tracking-tight">
-                <span class="text-electric-yellow text-2xl">⚡</span>
+                <i data-lucide="zap" class="text-electric-yellow w-6 h-6"></i>
                 <span>ELECTRICISTA MDQ</span>
             </div>
             <div class="hidden md:flex gap-8 text-sm font-medium text-gray-600">
                 <a href="#servicios" class="hover:text-black transition">Servicios</a>
-                <a href="#galeria" class="hover:text-black transition">Trabajos</a>
                 <a href="#testimonios" class="hover:text-black transition">Testimonios</a>
                 <a href="#faq" class="hover:text-black transition">FAQ</a>
             </div>
@@ -94,16 +96,16 @@
             <!-- Quick Features -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-5xl mx-auto">
                 <div class="flex items-center gap-2 text-sm">
-                    <span class="text-electric-yellow">✔</span> Atención rápida
+                    <i data-lucide="check-circle" class="text-electric-yellow w-4 h-4"></i> Atención rápida
                 </div>
                 <div class="flex items-center gap-2 text-sm">
-                    <span class="text-electric-yellow">✔</span> Trabajos garantizados
+                    <i data-lucide="shield-check" class="text-electric-yellow w-4 h-4"></i> Trabajos garantizados
                 </div>
                 <div class="flex items-center gap-2 text-sm">
-                    <span class="text-electric-yellow">✔</span> Materiales premium
+                    <i data-lucide="award" class="text-electric-yellow w-4 h-4"></i> Materiales premium
                 </div>
                 <div class="flex items-center gap-2 text-sm">
-                    <span class="text-electric-yellow">✔</span> +500 trabajos realizados
+                    <i data-lucide="users" class="text-electric-yellow w-4 h-4"></i> +500 trabajos realizados
                 </div>
             </div>
         </div>
@@ -117,8 +119,12 @@
                 <p class="font-bold text-lg">¿TE QUEDASTE SIN LUZ? ATENCIÓN DE URGENCIAS 24HS</p>
             </div>
             <div class="flex gap-4">
-                <a href="tel:+549223000000" class="bg-white text-red-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition">LLAMAR AHORA</a>
-                <a href="https://wa.me/549223000000?text=URGENCIA:%20Me%20quedé%20sin%20luz" class="border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white/10 transition">WHATSAPP</a>
+                <a href="tel:+549223000000" class="bg-white text-red-600 px-6 py-2 rounded-full font-bold hover:bg-gray-100 transition flex items-center gap-2">
+                    <i data-lucide="phone" class="w-4 h-4"></i> LLAMAR AHORA
+                </a>
+                <a href="https://wa.me/549223000000?text=URGENCIA:%20Me%20quedé%20sin%20luz" class="border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white/10 transition flex items-center gap-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> WHATSAPP
+                </a>
             </div>
         </div>
     </div>
@@ -135,7 +141,7 @@
                 <!-- Reparaciones -->
                 <div class="service-card bg-white p-10 rounded-3xl border border-gray-100 reveal">
                     <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">⚡</span>
+                        <i data-lucide="wrench" class="text-electric-yellow w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Reparaciones</h3>
                     <ul class="space-y-2 text-gray-600">
@@ -148,7 +154,7 @@
                 <!-- Instalaciones -->
                 <div class="service-card bg-white p-10 rounded-3xl border border-gray-100 reveal" style="transition-delay: 0.1s">
                     <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">🏠</span>
+                        <i data-lucide="home" class="text-electric-yellow w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Instalaciones</h3>
                     <ul class="space-y-2 text-gray-600">
@@ -161,7 +167,7 @@
                 <!-- Iluminación -->
                 <div class="service-card bg-white p-10 rounded-3xl border border-gray-100 reveal" style="transition-delay: 0.2s">
                     <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">💡</span>
+                        <i data-lucide="lightbulb" class="text-electric-yellow w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Iluminación</h3>
                     <ul class="space-y-2 text-gray-600">
@@ -174,40 +180,24 @@
                 <!-- Diagnóstico -->
                 <div class="service-card bg-white p-10 rounded-3xl border border-gray-100 reveal">
                     <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">🔍</span>
+                        <i data-lucide="search" class="text-electric-yellow w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Diagnóstico</h3>
                     <ul class="space-y-2 text-gray-600">
                         <li>• Fugas eléctricas</li>
                         <li>• Saltos recurrentes</li>
                         <li>• Medición de consumo</li>
-                        <li>• Balanceo de cargas</li>
                     </ul>
                 </div>
                 <!-- Puesta a tierra -->
                 <div class="service-card bg-white p-10 rounded-3xl border border-gray-100 reveal" style="transition-delay: 0.1s">
                     <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">🌎</span>
+                        <i data-lucide="globe" class="text-electric-yellow w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Puesta a Tierra</h3>
                     <ul class="space-y-2 text-gray-600">
                         <li>• Hincado de jabalina</li>
-                        <li>• Medición de resistencia</li>
                         <li>• Adecuación de instalaciones</li>
-                        <li>• Certificados</li>
-                    </ul>
-                </div>
-                <!-- Certificaciones -->
-                <div class="service-card bg-white p-10 rounded-3xl border border-gray-100 reveal" style="transition-delay: 0.2s">
-                    <div class="w-16 h-16 bg-yellow-50 rounded-2xl flex items-center justify-center mb-6">
-                        <span class="text-3xl">📋</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Certificaciones</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>• Informes técnicos</li>
-                        <li>• Mediciones protocolares</li>
-                        <li>• Revisiones preventivas</li>
-                        <li>• Firma de planos</li>
                     </ul>
                 </div>
             </div>
@@ -223,84 +213,40 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <div class="text-center reveal">
-                    <div class="text-4xl mb-4">🕒</div>
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="clock" class="text-electric-yellow w-10 h-10"></i>
+                    </div>
                     <h4 class="font-bold mb-2">Puntualidad</h4>
                     <p class="text-gray-500 text-sm">Respetamos tu tiempo al máximo.</p>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 0.1s">
-                    <div class="text-4xl mb-4">📜</div>
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="scroll-text" class="text-electric-yellow w-10 h-10"></i>
+                    </div>
                     <h4 class="font-bold mb-2">Garantía Escrita</h4>
                     <p class="text-gray-500 text-sm">Todos los trabajos respaldados.</p>
                 </div>
-                <div class="text-center reveal" style="transition-delay: 0.2s">
-                    <div class="text-4xl mb-4">🛠</div>
-                    <h4 class="font-bold mb-2">Herramientas Pro</h4>
-                    <p class="text-gray-500 text-sm">Tecnología de última generación.</p>
-                </div>
                 <div class="text-center reveal">
-                    <div class="text-4xl mb-4">✨</div>
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="sparkles" class="text-electric-yellow w-10 h-10"></i>
+                    </div>
                     <h4 class="font-bold mb-2">Trabajo Limpio</h4>
                     <p class="text-gray-500 text-sm">Cuidamos tu hogar como el nuestro.</p>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 0.1s">
-                    <div class="text-4xl mb-4">👤</div>
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="user" class="text-electric-yellow w-10 h-10"></i>
+                    </div>
                     <h4 class="font-bold mb-2">Atención Personalizada</h4>
                     <p class="text-gray-500 text-sm">Trato directo sin intermediarios.</p>
                 </div>
                 <div class="text-center reveal" style="transition-delay: 0.2s">
-                    <div class="text-4xl mb-4">💡</div>
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="help-circle" class="text-electric-yellow w-10 h-10"></i>
+                    </div>
                     <h4 class="font-bold mb-2">Asesoramiento</h4>
                     <p class="text-gray-500 text-sm">Gratuito y honesto para tu ahorro.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="counter-section bg-black text-white py-20">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div class="reveal">
-                <div class="text-5xl font-bold text-electric-yellow mb-2"><span class="counter" data-target="500">0</span>+</div>
-                <p class="text-gray-400 font-medium">Clientes Satisfechos</p>
-            </div>
-            <div class="reveal" style="transition-delay: 0.1s">
-                <div class="text-5xl font-bold text-electric-yellow mb-2"><span class="counter" data-target="1200">0</span>+</div>
-                <p class="text-gray-400 font-medium">Reparaciones Exitosas</p>
-            </div>
-            <div class="reveal" style="transition-delay: 0.2s">
-                <div class="text-5xl font-bold text-electric-yellow mb-2"><span class="counter" data-target="10">0</span>+</div>
-                <p class="text-gray-400 font-medium">Años de Experiencia</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="galeria" class="py-24 px-6 bg-gray-50">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl font-bold mb-4 tracking-tight">Galería de Trabajos</h2>
-                <p class="text-gray-500">Fotos reales de instalaciones realizadas en Mar del Plata.</p>
-            </div>
-            <div class="masonry reveal">
-                <div class="masonry-item"><img src="src/assets/images/gallery_electrician_1_1783107264190.jpg" alt="Instalación LED"></div>
-                <div class="masonry-item"><img src="src/assets/images/gallery_electrician_2_1783107273850.jpg" alt="Prueba de tablero"></div>
-                <div class="masonry-item"><img src="src/assets/images/hero_electrician_1783107235022.jpg" alt="Tablero eléctrico"></div>
-                <!-- More items can be added here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Before & After Section -->
-    <section class="py-24 px-6">
-        <div class="max-w-7xl mx-auto text-center">
-            <div class="mb-16 reveal">
-                <h2 class="text-4xl font-bold mb-4 tracking-tight">Antes y Después</h2>
-                <p class="text-gray-500">Deslizá para ver la diferencia de un trabajo profesional.</p>
-            </div>
-            <div class="ba-container reveal">
-                <div class="ba-image" style="background-image: url('src/assets/images/before_electrician_work_1783107245046.jpg');"></div>
-                <div class="ba-image ba-after" style="background-image: url('src/assets/images/after_electrician_work_1783107255549.jpg');"></div>
-                <div class="ba-handle"></div>
             </div>
         </div>
     </section>
@@ -387,21 +333,21 @@
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 reveal">
                     <div class="flex text-yellow-400 mb-4">★★★★★</div>
                     <p class="italic text-gray-600 mb-6">"Vino en 20 minutos por una urgencia un sábado. Súper profesional y cobró lo justo. Muy recomendable."</p>
-                    <div class="font-bold">Juan Pérez</div>
+                    <div class="font-bold">Juan</div>
                     <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">B° Centro</div>
                 </div>
                 <!-- T2 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 reveal" style="transition-delay: 0.1s">
                     <div class="flex text-yellow-400 mb-4">★★★★★</div>
                     <p class="italic text-gray-600 mb-6">"Hicimos toda la instalación de la casa nueva. Muy prolijo con los cables y las terminaciones. Excelente."</p>
-                    <div class="font-bold">María García</div>
+                    <div class="font-bold">María</div>
                     <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">B° Constitución</div>
                 </div>
                 <!-- T3 -->
                 <div class="bg-white p-8 rounded-3xl border border-gray-100 reveal" style="transition-delay: 0.2s">
                     <div class="flex text-yellow-400 mb-4">★★★★★</div>
                     <p class="italic text-gray-600 mb-6">"Cambió todas las térmicas y el disyuntor que saltaba siempre. Me explicó todo el proceso. Diez puntos."</p>
-                    <div class="font-bold">Carlos Rodríguez</div>
+                    <div class="font-bold">Carlos</div>
                     <div class="text-xs text-gray-400 uppercase tracking-widest mt-1">B° Punta Mogotes</div>
                 </div>
             </div>
@@ -486,7 +432,7 @@
                 <div class="faq-item bg-white px-6 rounded-2xl border border-gray-100">
                     <button class="faq-question">
                         <span>¿Otorgan garantía por los trabajos?</span>
-                        <span class="faq-icon">+</span>
+                        <i data-lucide="plus" class="faq-icon w-5 h-5"></i>
                     </button>
                     <div class="faq-answer">
                         <p>Absolutamente. Todos nuestros trabajos cuentan con garantía escrita de 6 meses a 1 año dependiendo del tipo de instalación realizada.</p>
@@ -502,8 +448,8 @@
             <h2 class="text-4xl md:text-6xl font-bold mb-8 tracking-tighter">¿Listo para solucionar tu problema eléctrico?</h2>
             <p class="text-xl text-gray-400 mb-12">No esperes más, pedí tu presupuesto ahora mismo por WhatsApp.</p>
             <a href="https://wa.me/549223000000?text=Hola,%20quisiera%20pedir%20un%20presupuesto" 
-               class="bg-electric-yellow text-black px-12 py-6 rounded-2xl text-2xl font-bold hover:scale-105 transition-transform inline-block shadow-2xl">
-                ¡Contactar Ahora!
+               class="bg-electric-yellow text-black px-12 py-6 rounded-2xl text-2xl font-bold hover:scale-105 transition-transform inline-block shadow-2xl flex items-center gap-3 mx-auto w-fit">
+                <i data-lucide="message-circle" class="w-8 h-8"></i> ¡Contactar Ahora!
             </a>
         </div>
     </section>
@@ -514,7 +460,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center gap-2 font-bold text-2xl tracking-tight mb-6">
-                        <span class="text-electric-yellow">⚡</span>
+                        <i data-lucide="zap" class="text-electric-yellow w-8 h-8"></i>
                         <span>ELECTRICISTA MDQ</span>
                     </div>
                     <p class="text-gray-500 max-w-sm mb-6">Expertos en soluciones eléctricas para el hogar en la ciudad de Mar del Plata. Calidad, rapidez y confianza.</p>
@@ -522,22 +468,28 @@
                 <div>
                     <h5 class="font-bold mb-6">Contacto</h5>
                     <ul class="space-y-4 text-gray-500 text-sm">
-                        <li>📍 Mar del Plata, Argentina</li>
-                        <li>📞 +54 9 223 000 0000</li>
-                        <li>✉️ info@electricistamdq.com.ar</li>
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Mar del Plata, Argentina</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i> +54 9 223 000 0000</li>
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> info@electricistamdq.com.ar</li>
                     </ul>
                 </div>
                 <div>
                     <h5 class="font-bold mb-6">Redes Sociales</h5>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-black transition">IG</a>
-                        <a href="#" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-black transition">FB</a>
+                        <a href="#" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-black transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:border-black transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-gray-200 text-sm text-gray-400">
                 <p>© 2026 Electricista MDQ. Todos los derechos reservados.</p>
-                <button id="back-to-top" class="mt-4 md:mt-0 font-bold text-black opacity-0 transition-opacity">Volver arriba ↑</button>
+                <button id="back-to-top" class="mt-4 md:mt-0">
+                    Volver arriba <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                </button>
             </div>
         </div>
     </footer>
@@ -545,15 +497,8 @@
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/549223000000" class="wa-float" target="_blank">
         <span class="wa-badge text-black font-semibold">👋 ¿Necesitás un presupuesto? Escribime por WhatsApp.</span>
-        <svg viewBox="0 0 32 32" class="w-8 h-8 fill-current">
-            <path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.23-.137-.57-.35-.812l-1.006-1.144c-.236-.268-.403-.51-.676-.51-.372 0-1.54 1.557-1.54 2.116 0 .51.2 1.2.66 1.972.105.175.226.35.36.528C13.282 18.25 15.486 20 18.52 20c.065 0 .13 0 .194-.01.25-.01.49-.03.74-.05a2.02 2.02 0 0 0 1.08-.445c.42-.33.65-.89.65-1.41 0-.51-.73-1.19-.73-1.19-.13-.13-.26-.26-.39-.26zM16 26c4.41 0 8-3.59 8-8s-3.59-8-8-8-8 3.59-8 8 3.59 8 8 8zm0-18c5.514 0 10 4.486 10 10s-4.486 10-10 10S6 23.514 6 18 10.486 8 16 8z"></path>
-        </svg>
+        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp" class="w-8 h-8">
     </a>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <img src="" alt="Lightbox">
-    </div>
 
     <!-- Script -->
     <script src="src/script.js"></script>
