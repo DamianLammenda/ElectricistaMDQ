@@ -1,0 +1,6 @@
+{
+  "name": "Electricista Mar del Plata",
+  "description": "Landing page moderna para servicios de electricidad domiciliaria en Mar del Plata, optimizada para conversiones por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
